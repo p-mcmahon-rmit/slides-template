@@ -1,0 +1,37 @@
+:root{
+  /* basic 2-bit palette from 1bit Monitor Glow Palette by Polyducks */
+  /* https://lospec.com/palette-list/1bit-monitor-glow */
+  --var-colour1: #222323;
+  --var-colour2: #f0f6f0;
+  --var-colour3: #156082;
+  --var-colour4: #e97132;
+}
+
+/* this swaps the colour order to account for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root{
+    --var-colour1: #f0f6f0;
+    --var-colour2: #222323;
+    --var-colour3: #e97132;
+    --var-colour4: #156082;
+  }
+}
+
+body{
+  background-color: var(--var-colour2);
+  color: var(--var-colour1);
+  line-height: 1.5;
+}
+
+h1, h2{
+  font-size: 2rem;
+}
+
+section{
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--var-colour3) solid 3px;
+}
