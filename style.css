@@ -1,25 +1,25 @@
 :root{
   /* basic 2-bit palette from 1bit Monitor Glow Palette by Polyducks */
   /* https://lospec.com/palette-list/1bit-monitor-glow */
-  --var-colour1: #222323;
-  --var-colour2: #f0f6f0;
-  --var-colour3: #156082;
-  --var-colour4: #e97132;
+  --colour-1: #222323;
+  --colour-2: #f0f6f0;
+  --colour-3: #156082;
+  --colour-4: #e97132;
 }
 
 /* this swaps the colour order to account for dark mode */
 @media (prefers-color-scheme: dark) {
   :root{
-    --var-colour1: #f0f6f0;
-    --var-colour2: #222323;
-    --var-colour3: #e97132;
-    --var-colour4: #156082;
+    --colour-1: #f0f6f0;
+    --colour-2: #222323;
+    --colour-3: #e97132;
+    --colour-4: #156082;
   }
 }
 
 body{
-  background-color: var(--var-colour2);
-  color: var(--var-colour1);
+  background-color: var(--colour-2);
+  color: var(--colour-1);
   line-height: 1.5;
 }
 
@@ -27,11 +27,52 @@ h1, h2{
   font-size: 2rem;
 }
 
-section{
-  width: 100dvw;
+nav{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slideLinks{
+  border: var(--colour-3) solid 3px;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.navThumb{
+}
+.animatedDetailsDisclosure{
+  width: 2rem;
+  flex-basis: 2rem;
+  height: 2rem;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--colour-3);
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;  
+  background-color: var(--colour-2);
+  stroke: var(--colour-1);
+}
+.animatedDetailsDisclosureLine{
+
+}
+/* controls to change slides */
+.slideControls{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;  
+}
+.slideControlButton{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.frame{
+  width: 100%;
   height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: var(--var-colour3) solid 3px;
+  border: var(--colour-3) solid 3px;
 }

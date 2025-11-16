@@ -8,16 +8,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav></nav>
+  <nav>
+    <div class="slideLinks">
+      <a href="#slide-1">1</a>
+      <a href="#slide-2">2</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-3">3</a>
+    </div>    
+    <div class="navThumb">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="animatedDetailsDisclosure">
+        <line x1="10" y1="30" x2="90" y2="30" strokeWidth="5" />
+        <line x1="10" y1="50" x2="90" y2="50" strokeWidth="5" />
+        <line x1="10" y1="70" x2="90" y2="70" strokeWidth="10" />
+      </svg>
+    </div>
+  </nav>
   <main>
-    <section>
+    <div class="slideControls">
+      <button class="slideControlButton" id="prevSlideButton">↑</button>
+      <button class="slideControlButton" id="nextSlideButton">↓</button>      
+    </div>
+    <section id="slide-1">
       <div class="frame">
         <h2>Interactive Media 1</h2>
         <h3>OART 1013 2550</h3>
         <h3>Welcome and Introductions</h3>
       </div>
     </section>
-    <section>
+    <section id="slide-2">
       <div class="frame">
         <h2>What's on Today</h2>
         <ul>
@@ -29,7 +51,7 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="slide-3">
       <div class="frame">
         <h2>Introduction Questions</h2>
         <ul>
@@ -41,7 +63,7 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="slide-4">
       <div class="frame">
         <h2>What is coding?</h2>
         <p>
@@ -56,7 +78,7 @@
         <img src="./s4/whatIsCoding.png" alt="code written in VS Code">
       </div>
     </section>
-    <section>
+    <section id="slide-5">
       <div class="frame">
         <h2>Interaction Design</h2>
         <p>
@@ -71,7 +93,7 @@
         <img src="./s5/interactionBehaviour.gif" alt="pressing a button to change the background colour from white to red">
       </div>
     </section>
-    <section>
+    <section id="slide-6">
       <div class="frame">
         <h2>Why should I learn to code?</h2>
         <p>
