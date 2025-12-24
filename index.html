@@ -10,10 +10,14 @@
 </head>
 <body>
   <nav>
-    <div class="slideLinks">
+    <div class="slideLinksWrapper">
+      <div class="slideLinks"></div>
+      <h3>Select Slide:</h3>
+      <p id="slide-title-display">&nbsp;</p>
+
     </div>    
     <div class="navThumb">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="animatedDetailsDisclosure">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="animatedNavDisclosure">
         <line x1="10" y1="30" x2="90" y2="30" stroke-width="5"/>
         <line x1="10" y1="50" x2="90" y2="50" stroke-width="5"/>
         <line x1="10" y1="70" x2="90" y2="70" stroke-width="10"/>
@@ -22,9 +26,9 @@
   </nav>
   <main>
     <div class="slideControls">
-      <div class="slideControlButton" id="currentSlideDisplay">0</div>
-      <button class="slideControlButton" id="prevSlideButton" disabled>↑</button>
-      <button class="slideControlButton" id="nextSlideButton">↓</button>
+      <div class="slideControlButton" id="current-slide-display">0</div>
+      <button class="slideControlButton" id="prev-slide-button" disabled>↑</button>
+      <button class="slideControlButton" id="next-slide-button">↓</button>
     </div>
     <section id="slide-1" class="slide">
       <div class="frame">

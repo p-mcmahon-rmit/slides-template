@@ -42,14 +42,19 @@ nav:hover{
   opacity: 1;
   transform: translate(-50%, 0);
 }
-.slideLinks{
+.slideLinksWrapper{
   border: var(--colour-3) solid 3px;
   border-radius: 6px;
   padding: 1rem;
+  width: 10rem;
 }
-.navThumb{
+.slideLinks{
+  display: flex;
 }
-.animatedDetailsDisclosure{
+.slideLinks a{
+  min-width: 1rem;
+}
+.animatedNavDisclosure{
   width: 2rem;
   flex-basis: 2rem;
   height: 2rem;
@@ -60,9 +65,6 @@ nav:hover{
   border-bottom-right-radius: 5px;  
   background-color: var(--colour-2);
   stroke: var(--colour-1);
-}
-.animatedDetailsDisclosureLine{
-
 }
 /* controls to change slides */
 .slideControls{
