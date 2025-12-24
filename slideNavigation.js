@@ -42,23 +42,30 @@ let currentSlide = 0;
 /* ------------------------------------------------------------------------------------------------------------------ */
 // Functions
 /* ------------------------------------------------------------------------------------------------------------------ */
-function nextSlide() {
-    if(currentSlide === slidesInfoArray.length - 2){
-        nextSlideButton.disabled = true;
-    } else if (currentSlide === 0){
-        prevSlideButton.disabled = false;
+function updateCurrentSlide(newSlideIndex) {
+    // make sure within range
+    if (newSlideIndex >= 0 && newSlideIndex < slidesInfoArray.length) {
+        currentSlide = newSlideIndex;
+        // update button states
+        if(currentSlide === 0){
+            prevSlideButton.disabled = true;
+        } else if (currentSlide === 1){
+            prevSlideButton.disabled = false;
+        } else if (currentSlide === slidesInfoArray.length - 2){
+            nextSlideButton.disabled = false;
+        } else if (currentSlide === slidesInfoArray.length - 1){
+            nextSlideButton.disabled = true;
+        }
     }
-    currentSlide = currentSlide + 1;
+}
+
+function nextSlide() {
+    updateCurrentSlide(currentSlide + 1);
     slidesInfoArray[currentSlide].slide.scrollIntoView(true);
 }
 nextSlideButton.addEventListener("click", nextSlide);
 function prevSlide() {
-    if(currentSlide === 1){
-        prevSlideButton.disabled = true;
-    } else if (currentSlide === slidesInfoArray.length - 1){
-        nextSlideButton.disabled = false;
-    }
-    currentSlide = currentSlide - 1;
+    updateCurrentSlide(currentSlide - 1);
     slidesInfoArray[currentSlide].slide.scrollIntoView(true);
 }
 prevSlideButton.addEventListener("click", prevSlide);
@@ -68,20 +75,10 @@ function intersectionCallback(entries) {
         if (entry.isIntersecting) {
             let entryIndex = entry.target.dataset.index;
             // update current slide value
-            currentSlide = parseInt(entryIndex);
+            updateCurrentSlide(parseInt(entryIndex));
             // update current slide display
             currentSlideDisplay.textContent = entryIndex;
-            // update button states
-            // due to order of updating this is slightly different to the button functions' conditionals
-            if(currentSlide === 0){
-                prevSlideButton.disabled = true;
-            } else if (currentSlide === 1){
-                prevSlideButton.disabled = false;
-            } else if (currentSlide === slidesInfoArray.length - 2){
-                nextSlideButton.disabled = false;
-            } else if (currentSlide === slidesInfoArray.length - 1){
-                nextSlideButton.disabled = true;
-            }
+
         }
     })
 }
