@@ -30,10 +30,17 @@ h1, h2{
 nav{
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, calc(-100% + 2rem));
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0.5;
+  transition: 0.4s;
+  cursor: grab;
+}
+nav:hover{
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 .slideLinks{
   border: var(--colour-3) solid 3px;
