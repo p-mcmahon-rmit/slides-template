@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'Work Sans';
+  src: url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+}
+
 :root{
   /* basic 2-bit palette from 1bit Monitor Glow Palette by Polyducks */
   /* https://lospec.com/palette-list/1bit-monitor-glow */
@@ -20,6 +25,7 @@
 body{
   background-color: var(--colour-2);
   color: var(--colour-1);
+  font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
 }
 
