@@ -45,9 +45,6 @@ const slidesInfoArray = slideElementsArray.map((slide, slideNum) => {
 
 // we need to set explicit width to the nav bar for overflow
 
-
-console.log(slidesInfoArray);
-
 let currentSlide = 0;
 
 

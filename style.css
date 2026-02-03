@@ -70,11 +70,27 @@ nav:hover{
 .slideControls{
   position: fixed;
   right: 1rem;
-  bottom: 1rem;  
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
 }
 .slideControlButton{
   width: 2.5rem;
   height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+.slide {
+  scroll-snap-align: start;
 }
 
 .frame{
