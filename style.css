@@ -29,10 +29,11 @@ h1, h2{
 
 nav{
   position: fixed;
-  left: 50%;
-  transform: translate(-50%, calc(-100% + 2rem));
+  left: 0;
+  top: 50%;
+  transform: translate(calc(-100% + 2rem), -50%);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   opacity: 0.5;
   transition: 0.4s;
@@ -40,16 +41,19 @@ nav{
 }
 nav:hover{
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translate(0, -50%);
 }
 .slideLinksWrapper{
   border: var(--colour-3) solid 3px;
   border-radius: 6px;
   padding: 1rem;
-  width: 10rem;
+  /*width: 10rem;*/
+  background-color: var(--colour-2);
 }
 .slideLinks{
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .slideLinks a{
   min-width: 1rem;
@@ -60,9 +64,9 @@ nav:hover{
   height: 2rem;
   aspect-ratio: 1 / 1;
   border: 2px solid var(--colour-3);
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;  
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: var(--colour-2);
   stroke: var(--colour-1);
 }

@@ -24,7 +24,7 @@ const slidesInfoArray = slideElementsArray.map((slide, slideNum) => {
     // create nav link
     const slideLink = document.createElement("a");
     slideLink.href = `#slide-${slideNum}`;
-    slideLink.textContent = slideNum;
+    slideLink.textContent = `${slideNum}: ${slideTitle}`;
     // when hover display title
     slideLink.addEventListener("mouseenter", () => {
         slideTitleDisplay.textContent = `${slideNum}: ${slideTitle}`;
