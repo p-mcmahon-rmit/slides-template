@@ -110,4 +110,5 @@ main {
   align-items: center;
   justify-content: center;
   border: var(--colour-3) solid 3px;
+  overflow: hidden;
 }
