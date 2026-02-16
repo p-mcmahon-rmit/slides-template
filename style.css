@@ -129,3 +129,43 @@ main {
 .titleSlide > h3 {
   font-size: 2vw;
 }
+
+/*content slide*/
+.contentSlide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.slideTitle {
+  font-size: 4vw;
+  color: var(--colour-4);
+}
+.quoteContainer {
+  font-size: 2rem;
+}
+.quoteContainer cite {
+  font-style: italic;
+}
+.flexRow {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+}
+.flexRow > .quoteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flexRow > figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.flexRow > figure > img {
+  min-height: 0;
+  min-width: 0;
+  width: fit-content;
+  /*flex: 1;*/
+}
