@@ -8,7 +8,7 @@
   /* https://lospec.com/palette-list/1bit-monitor-glow */
   --colour-1: #222323;
   --colour-2: #f0f6f0;
-  --colour-3: #156082;
+  --colour-3: #2297CE;
   --colour-4: #e97132;
 }
 
@@ -17,8 +17,8 @@
   :root{
     --colour-1: #f0f6f0;
     --colour-2: #222323;
-    --colour-3: #e97132;
-    --colour-4: #156082;
+    --colour-3: #2297CE;
+    --colour-4: #e97132;
   }
 }
 
