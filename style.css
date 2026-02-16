@@ -112,3 +112,20 @@ main {
   border: var(--colour-3) solid 3px;
   overflow: hidden;
 }
+
+/*title slide*/
+.titleSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titleSlide > h1 {
+  font-size: 8vw;
+}
+.titleSlide > h2 {
+  font-size: 6vw;
+}
+.titleSlide > h3 {
+  font-size: 2vw;
+}
